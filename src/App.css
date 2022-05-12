@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  background: #f5f5f5;
+  color: #4d4d4d;
+  min-width: 230px;
+  max-width: 550px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+.App .header {
+  width: 100%;
+  font-size: 100px;
+  font-weight: 100;
+  color: rgba(175, 47, 47, 0.15);
+}
+
+/* todo input form styling */
+.todo-form {
+  position: relative;
+}
+.todo-form form input {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 300;
+  border: none;
+  padding: 16px 16px 16px 60px;
+  box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3);
+  -webkit-font-smoothing: antialiased;
+}
+
+.todo-form form input:focus {
+  outline: 0;
+}
+
+.todo-form form input::-webkit-input-placeholder {
+  font-style: italic;
+  font-weight: 300;
+  color: #e6e6e6;
+}
+/* todo input form styling */
+
+/* todo completed all styling */
+.check-all-arrow {
+  border: none;
+  outline: none;
+  display: inline-block;
+  position: absolute;
+  color: #e6e6ea;
+  background-color: #fff;
+  top: 21px;
+  left: 13px;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.check-all-arrow-light {
+  color: #e6e6ea;
+}
+
+.check-all-arrow-dark {
+  color: rgb(115, 115, 115);
+}
+
+/* todo completed all styling */
+
+/* todo-list styling */
+
+.todo-list ul {
+  list-style: none;
+  font-size: 24px;
+  z-index: 100;
+  box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+.todo-list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  background-color: #fff;
+  border-top: 0.5px solid rgb(233, 233, 233);
+  padding: 16px 16px 16px 10px;
+}
+
+.todo-list ul li #todo-text {
+  /* line-height: 1.2; */
+  font-size: 28px;
+  width: calc(83% - 30px);
+  text-align: left;
+  word-wrap: break-word;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.todo-list ul li #todo-text.completed-todo-item {
+  text-decoration: line-through;
+  color: #ccc;
+  transition: all 0.5s ease-in-out;
+}
+
+/* todo-list styling */
+
+/* todo check styling */
+
+.todo-list ul li label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.todo-list ul li input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.todo-list ul li input[type="checkbox"]:checked + label {
+  border: 1px solid #ccc;
+  background: url(./images/tick.png);
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+/* todo check styling */
+
+/* delete button style */
+.todo-list ul li:hover > .delete-button {
+  visibility: visible;
+}
+
+.todo-list ul li .delete-button {
+  visibility: hidden;
+  font-size: 20px;
+  border: 0;
+  background-color: #fff;
+  color: rgba(175, 47, 47, 0.4);
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+/* delete button style */
+
+/* bottom nav styling */
+
+.bottom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 50px;
+  color: #777;
+  padding: 10px 15px;
+  text-align: center;
+  border-top: 0.5px solid rgb(233, 233, 233);
+
+  box-shadow: 0 1px 1px rgb(0 0 0 / 20%), 0 8px 0 -3px #f6f6f6,
+    0 9px 1px -3px rgb(0 0 0 / 20%), 0 16px 0 -6px #f6f6f6,
+    0 17px 2px -6px rgb(0 0 0 / 20%);
+}
+
+.bottom-nav::before {
+  content: "";
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  top: -7px;
+  background: inherit;
+  z-index: 2;
+  box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3);
+
+}
+
+.bottom-nav .bottom-navlinks {
+}
+
+.bottom-nav .bottom-navlinks a {
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.bottom-nav .bottom-navlinks a.active {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.bottom-nav button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.bottom-nav button:hover {
+  text-decoration: underline;
+}
+
+/* bottom nav styling */
+
+/* footer styling */
+
+.footer {
+  margin: 65px auto 0;
+  color: #bfbfbf;
+  font-size: 10px;
+  text-shadow: 0 1px 0 rgb(255 255 255 / 50%);
+}
+
+.footer > p {
+  margin: 1rem;
+}
+
+.contact {
+  text-decoration: none;
+  color: #bfbfbf;
+  font-size: 10px;
+}
+
+p a.contact:hover{
+    font-size : 12px;
+}
+
+/* footer styling */
