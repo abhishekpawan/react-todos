@@ -1,4 +1,6 @@
 import React from "react";
+import '../styles/Footer.css'
+
 
 const Footer = () => {
   return (
@@ -6,7 +8,7 @@ const Footer = () => {
       <p>Double-click to edit a todo</p>
       <p>
         Created by{" "}
-        <a className="contact" href="https://www.linkedin.com/in/abhishekpawan">
+        <a href="https://www.linkedin.com/in/abhishekpawan">
           Abhishek Kumar
         </a>
       </p>

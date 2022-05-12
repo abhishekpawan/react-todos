@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { storage } from "../App";
 import { ITodo } from "./TodoForm";
 import TodoItem from "./TodoItem";
+import '../styles/TodoList.css'
 
 const TodoList = () => {
   const { todoList } = useContext(storage);

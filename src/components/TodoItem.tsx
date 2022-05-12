@@ -9,6 +9,9 @@ import React, {
 import { storage } from "../App";
 import { FaTimes } from "react-icons/fa";
 
+import '../styles/TodoItem.css'
+
+
 import { ITodo } from "./TodoForm";
 
 const TodoItem: FC<{ todoItem: ITodo }> = (props) => {

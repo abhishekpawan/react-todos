@@ -1,0 +1,47 @@
+/* todo input form styling */
+.todo-form {
+    position: relative;
+  }
+  .todo-form form input {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 300;
+    border: none;
+    padding: 16px 16px 16px 60px;
+    box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .todo-form form input:focus {
+    outline: 0;
+  }
+  
+  .todo-form form input::-webkit-input-placeholder {
+    font-style: italic;
+    font-weight: 300;
+    color: #e6e6e6;
+  }
+  /* todo input form styling */
+
+
+  /* todo check all styling */
+.check-all-arrow {
+  border: none;
+  outline: none;
+  display: inline-block;
+  position: absolute;
+  color: #e6e6ea;
+  background-color: #fff;
+  top: 21px;
+  left: 13px;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.check-all-arrow-light {
+  color: #e6e6ea;
+}
+
+.check-all-arrow-dark {
+  color: rgb(115, 115, 115);
+}

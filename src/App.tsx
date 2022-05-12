@@ -13,9 +13,6 @@ export const storage = createContext<any>(null);
 export default function App() {
   const [todoList, setTodoList] = useState<any>([]);
 
-  console.log(todoList);
-  
-
   return (
     <React.Fragment>
       <storage.Provider value={{ todoList, setTodoList }}>

@@ -1,0 +1,55 @@
+/* todo check styling */
+
+.todo-list ul li label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.todo-list ul li input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.todo-list ul li input[type="checkbox"]:checked + label {
+  border: 1px solid #ccc;
+  background: url(../images/tick.png);
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+/* todo check styling */
+
+/* editable todo styling */
+.todo-list form {
+  display: flex;
+  justify-content: end;
+}
+.todo-list form input {
+  padding: 16px 16px 16px 10px;
+  font-size: 28px;
+  width: calc(100% - 50px);
+  transition: all 0.5s ease-in-out;
+}
+
+/* editable todo styling */
+
+/* delete button style */
+.todo-list ul li:hover > .delete-button {
+  visibility: visible;
+}
+
+.todo-list ul li .delete-button {
+  visibility: hidden;
+  font-size: 20px;
+  border: 0;
+  background-color: #fff;
+  color: rgba(175, 47, 47, 0.4);
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+/* delete button style */

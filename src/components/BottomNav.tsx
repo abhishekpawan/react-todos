@@ -1,16 +1,31 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { storage } from "../App";
 import { ITodo } from "./TodoForm";
+import '../styles/BottomNav.css'
+
 
 const BottomNav = () => {
   const { todoList, setTodoList } = useContext(storage);
+  const [isCompleted, setCompleted] = useState<boolean>(false);
 
-  let itemLeft = todoList.filter((todo: any) => {
+  let itemLeft = todoList.filter((todo: ITodo) => {
     if (todo.completed === false) {
       return todo;
     }
   });
+
+  useEffect(() => {
+    let completedTodo = todoList.filter(
+      (todo: ITodo) => todo.completed === true
+    );
+
+    if (completedTodo?.length > 0) {
+      setCompleted(true);
+    } else {
+      setCompleted(false);
+    }
+  }, [todoList]);
 
   const clearCompletedHandler = () => {
     let newTodoList: any = todoList.filter(
@@ -31,7 +46,11 @@ const BottomNav = () => {
               <NavLink to="/active">Active</NavLink>
               <NavLink to="/completed">Completed</NavLink>
             </div>
-            <button onClick={clearCompletedHandler}>Clear Completed</button>
+            {isCompleted ? (
+              <button onClick={clearCompletedHandler}>Clear Completed</button>
+            ) : (
+              <button style={{visibility:"hidden"}}>Clear Completed</button>
+            )}
           </div>
         ) : (
           ""

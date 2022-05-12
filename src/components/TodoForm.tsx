@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { storage } from "../App";
+import '../styles/TodoForm.css'
 
 export interface ITodo {
   id: string;
@@ -92,7 +93,6 @@ const TodoForm = () => {
         <form action="submit" onSubmit={submitHandler}>
 
           <input
-          className="todoform-input"
             type="text"
             placeholder="What needs to be done?"
             ref={enteredTodo}

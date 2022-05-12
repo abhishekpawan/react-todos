@@ -1,0 +1,36 @@
+/* todo-list styling */
+
+.todo-list ul {
+  list-style: none;
+  font-size: 24px;
+  z-index: 100;
+  box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+.todo-list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  background-color: #fff;
+  border-top: 0.5px solid rgb(233, 233, 233);
+  padding: 16px 16px 16px 10px;
+}
+
+.todo-list ul li #todo-text {
+  /* line-height: 1.2; */
+  font-size: 28px;
+  width: calc(83% - 30px);
+  text-align: left;
+  word-wrap: break-word;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.todo-list ul li #todo-text.completed-todo-item {
+  text-decoration: line-through;
+  color: #ccc;
+  transition: all 0.5s ease-in-out;
+}
+
+/* todo-list styling */
